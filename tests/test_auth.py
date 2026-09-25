@@ -1,8 +1,8 @@
 """
 test_auth.py
 ------------
-Tests for auth.py: account creation, PIN lockout after 3 failed attempts, and admin login. File writes are patched out so tests
-never touch the real atm_database.json
+Tests for auth.py: acc creation, PIN lockout after 3 failed attempts, and same for admin login. File writes are patched out,
+so tests never touch the real atm_database.py
 """
 import os
 import sys

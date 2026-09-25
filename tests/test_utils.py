@@ -2,7 +2,7 @@
 test_utils.py
 -------------
 Unit tests for the pure helper functions in utils.py: PIN hashing,currency formatting, and PIN validation. 
-These have no side effects,so no database or file mocking is needed.
+These have no side effects,so no database or file mocking is needed
 """
 import os
 import sys
