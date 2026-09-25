@@ -1,14 +1,13 @@
 
 # ATM Simulator — Multi-User Edition with Admin Panel
 **Author:** Rohit Maity (26BCE11118)
-
+---------------------------------------------------------------------
 A console-based, multi-user ATM system written in Python. Supports
 account registration, secure PIN login with lockout, everyday banking
 operations, and an admin role for account recovery — with all data
 persisted to a local JSON file between runs.
 
 ## Overview
-
 Unlike a typical single-account ATM script, this project models a
 small real banking system: any number of users can register their own
 account, log in with their own account number and PIN, and manage
@@ -20,7 +19,6 @@ statement and scope, and [`Project_Report.pdf`](Project_Report.pdf)
 for the full write-up with diagrams.
 
 ## Features
-
 - **Account registration** with an auto-generated account number and a
   self-chosen 4-digit PIN
 - **Secure login** — PINs are SHA-256 hashed, never stored or compared
@@ -43,7 +41,6 @@ for the full write-up with diagrams.
   logic, deposits/withdrawals, and password changes
 
 ## Technologies / Tools Used
-
 - **Python 3.10+** (standard library only — `hashlib`, `json`, `os`,
   `datetime`)
 - **unittest** and **unittest.mock** for the test suite
@@ -52,7 +49,6 @@ for the full write-up with diagrams.
 - **Git** for version control
 
 ## Project Structure
-
 ```
 ├── main.py                # Entry point / top-level menu
 ├── constants.py           # Configuration values
@@ -75,9 +71,7 @@ for the full write-up with diagrams.
     ├── er_diagram.png
     └── generate_diagrams.py   # Script that renders the diagrams above
 ```
-
 ## Steps to Install & Run
-
 1. Make sure you have **Python 3.10 or newer** installed:
    ```
    python3 --version
@@ -96,32 +90,26 @@ for the full write-up with diagrams.
      you already created
    - Type `admin` as the account number at the login prompt to access
      the admin panel (default admin PIN: `1234`)
-
 Your data is saved automatically to `atm_database.json` in the same
 folder — delete that file at any time to reset the system.
 
 ## Instructions for Testing
-
 The project ships with 29 unit tests covering the core logic (PIN
 hashing/validation, currency formatting, account creation, login
 lockout after 3 failed attempts, admin login, deposits, withdrawals,
 and password changes). Tests use mocked input and mocked file writes,
 so running them never touches your real `atm_database.json`.
-
 Run the full suite from the project root:
 ```
 python3 -m unittest discover -s tests -v
 ```
-
 Expected result: `Ran 29 tests ... OK`
 
 ## Screenshots
-
 See the `diagrams/` folder for the system architecture, workflow,
 use case, class, and ER diagrams referenced in the project report.
 
 ## Notes on Security Scope
-
 This is an academic/demo project, not production banking software:
 PINs are hashed (SHA-256) but the JSON file is not encrypted at rest,
 and there is no protection against concurrent multi-process writes.

@@ -1,7 +1,4 @@
 # Problem Statement
-
-## Problem Statement
-
 Traditional beginner ATM simulation scripts model only a single hard-coded
 account with an in-memory balance, so all data is lost the moment the
 program exits and there is no way to manage more than one user. This
@@ -11,7 +8,6 @@ separate admin role for account recovery — with all data persisted
 between runs.
 
 ## Scope of the Project
-
 **In scope:**
 - Multi-user account registration and login via a console interface
 - Core banking operations: balance check, deposit, withdrawal
@@ -21,7 +17,6 @@ between runs.
   locked account, and inspect any user's history
 - Persistent storage using a local JSON file (no external database
   server required)
-
 **Out of scope:**
 - A graphical or web user interface (console-only)
 - Real banking integrations, multi-currency support, or interest
@@ -31,7 +26,6 @@ between runs.
   file itself is not encrypted)
 
 ## Target Users
-
 - **Bank customers (regular users)** — create an account, log in with
   their account number and PIN, and manage their own balance.
 - **Bank administrator** — a single admin role responsible for
@@ -39,7 +33,6 @@ between runs.
   accounts after failed login attempts.
 
 ## High-Level Features
-
 1. **Account registration** — auto-generated account number, user sets
    their own 4-digit PIN, starting balance of Rs. 5,000.
 2. **Secure login** — PIN is hashed (SHA-256) and never stored or
