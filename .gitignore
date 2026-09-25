@@ -1,4 +1,4 @@
-# Runtime data - should not be committed, generated automatically on first run
+# Runtime data - shouldn't be committed,generated automatically on first run itself
 atm_database.json
 # Python
 __pycache__/

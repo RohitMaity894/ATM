@@ -1,7 +1,8 @@
 """
 constants.py
 ------------
-Central configuration values for the ATM system. Keeping these in one place makes the system easy to tune without touching business logic.
+Central config. values for the ATM system. Keeping these in one place makes the system easy to tune without touching
+business logic.
 """
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

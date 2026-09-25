@@ -1,15 +1,15 @@
 """
 auth.py
 -------
-Everything related to proving identity: creating new accounts, logging into an existing one (with lockout after repeated failures),
-and admin authentication. Returns the authenticated account number (or "admin") to the caller instead of driving the menu itself,
+Everything related to proving identity: creating new accs, logging into an existing one (with lockout after repeated failures),
+and admin authentication. Returns the authenticated acc num (or "admin") to the caller instead of driving the menu itself,
 so this module stays focused purely on authentication.
 """
 from constants import STARTING_BALANCE, MAX_ATTEMPTS
 from database import save_db, generate_account_number
 from utils import hash_pin, now, fmt, set_new_pin
 def create_account(db: dict) -> str:
-    """Register a new user account. Returns the new account number."""
+    """Register a new user acc. Returns the new acc number."""
     print("\n--- Create New Account ---")
     name = input("Enter your name: ").strip() or "Unnamed"
     acc_num = generate_account_number(db)
@@ -32,9 +32,9 @@ def create_account(db: dict) -> str:
     return acc_num
 def login_existing(db: dict):
     """
-    Interactive login flow for an existing account.
-    Returns the account number (str) on success, or None if login did not complete (not found, blocked, wrong PIN, cancelled).
-    Handles the "admin" special-case account number by Handing off to admin_login().
+    Interactive login flow for an existing acc.
+    Returns the acc num (str) on success, or None if login did not complete (not found, blocked, wrong PIN, cancelled).
+    Handles the "admin" special-case acc num by Handing off to admin_login().
     """
     acc_num = input("\nEnter Account Number: ").strip()
     if acc_num.lower() == "admin":
@@ -78,7 +78,7 @@ def login_existing(db: dict):
         save_db(db)
     return None
 def admin_login(db: dict) -> bool:
-    """Authenticate the admin account. Returns True on success."""
+    """Authenticate the admin acc. Returns True on success."""
     pin = input("Enter Admin PIN: ").strip()
     if hash_pin(pin) != db["admin"]["pin_hash"]:
         print("Incorrect admin PIN.")

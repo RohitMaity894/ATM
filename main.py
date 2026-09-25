@@ -1,7 +1,8 @@
 """
 main.py
 -------
-Entry point. Ties together the database, auth, user_ops, and admin_ops modules into the top-level loop. Run this file to start the ATM.
+Entry point. Ties together the database, auth, user_ops, and admin_ops modules into the top-level loop.
+Run this file to start the ATM.
 
 Author: Rohit Maity (26BCE11118)
 """

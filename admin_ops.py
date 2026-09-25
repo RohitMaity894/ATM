@@ -2,7 +2,7 @@
 admin_ops.py
 ------------
 The admin menu and the management operations it offers: listing all
-users, forcing a password reset, unblocking a locked account, and
+users, forcing a password reset, unblocking a locked acc, and
 viewing any user's transaction history.
 """
 from database import save_db

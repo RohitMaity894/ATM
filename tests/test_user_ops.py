@@ -2,7 +2,7 @@
 test_user_ops.py
 -----------------
 Tests for user_ops.py: deposit, withdraw (including the insufficient balance guard), and password change. Uses a bare in-memory
-account dict rather than the full database, and patches save_db so no file I/O happens during tests
+acc dict rather than the full database, and patches save_db so no file I/O happens during tests
 """
 import os
 import sys
