@@ -54,16 +54,15 @@ for the full write-up with diagrams.
 ## Project Structure
 
 ```
-atm_project/
-├── main.py            # Entry point / top-level menu
-├── constants.py        # Configuration values
-├── utils.py             # Hashing, formatting, input validation helpers
-├── database.py          # JSON persistence layer
-├── auth.py               # Login, registration, admin authentication
-├── user_ops.py           # User menu: balance, deposit, withdraw, history, PIN
-├── admin_ops.py          # Admin menu: list users, reset, unblock, history
-├── statement.md          # Problem statement, scope, target users, features
-├── README.md             # This file
+├── main.py                # Entry point / top-level menu
+├── constants.py           # Configuration values
+├── utils.py               # Hashing, formatting, input validation helpers
+├── database.py            # JSON persistence layer
+├── auth.py                # Login, registration, admin authentication
+├── user_ops.py            # User menu: balance, deposit, withdraw, history, PIN
+├── admin_ops.py           # Admin menu: list users, reset, unblock, history
+├── statement.md           # Problem statement, scope, target users, features
+├── README.md              # This file
 ├── tests/
 │   ├── test_utils.py
 │   ├── test_auth.py
