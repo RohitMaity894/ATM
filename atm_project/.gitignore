@@ -1,0 +1,10 @@
+# Runtime data - should not be committed, generated automatically on first run
+atm_database.json
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS
+.DS_Store
